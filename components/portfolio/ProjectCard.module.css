@@ -1,0 +1,127 @@
+.card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 20px 60px rgba(206, 0, 84, 0.15);
+}
+
+.imageWrapper {
+    position: relative;
+    background: linear-gradient(135deg, var(--nex-primary), var(--nex-dark));
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .projectImage {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .overlay {
+    transform: translateY(0);
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.client {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.category {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: var(--nex-primary);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.year {
+    font-size: 0.9rem;
+    color: var(--nex-navy);
+    font-weight: 600;
+}
+
+.description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--nex-navy);
+    margin-bottom: 1.5rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.4rem 0.8rem;
+    background: rgba(206, 0, 84, 0.1);
+    color: var(--nex-primary);
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .imageWrapper {
+        height: 250px;
+    }
+
+    .imageIcon {
+        font-size: 5rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+}

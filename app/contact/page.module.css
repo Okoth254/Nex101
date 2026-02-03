@@ -1,0 +1,223 @@
+.page {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(135deg, var(--nex-primary), var(--nex-dark));
+    color: white;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.contactSection {
+    padding: 6rem 2rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+}
+
+.formWrapper h2,
+.infoWrapper h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-weight: 600;
+    color: #4C0224;
+    font-size: 0.95rem;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--nex-primary);
+    box-shadow: 0 0 0 3px rgba(206, 0, 84, 0.1);
+}
+
+.submitButton {
+    padding: 1.25rem 2.5rem;
+    background: var(--nex-primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(206, 0, 84, 0.3);
+}
+
+.submitButton:hover {
+    background: var(--nex-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(206, 0, 84, 0.4);
+}
+
+.infoCard {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.infoIcon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.infoCard h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--nex-navy);
+    margin-bottom: 0.5rem;
+}
+
+.infoCard p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #4C0224;
+}
+
+.socialLinks {
+    margin-top: 2rem;
+}
+
+.socialLinks h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.socialIcons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.socialIcons a {
+    padding: 0.75rem 1.5rem;
+    background: var(--nex-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+    background: var(--nex-dark);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+.submitButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.statusMessage {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.statusMessage.success {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.statusMessage.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .contactSection {
+        padding: 4rem 1rem;
+    }
+
+    .infoCard {
+        padding: 1.5rem;
+    }
+
+    .socialIcons {
+        flex-direction: column;
+    }
+
+    .socialIcons a {
+        text-align: center;
+    }
+}

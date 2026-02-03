@@ -1,0 +1,155 @@
+.section {
+    padding: 6rem 2rem;
+    background: var(--background);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.side {
+    padding: 3rem;
+    border-radius: 20px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Problem Side - Static/Dull */
+.problem {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    color: #666;
+}
+
+.problem .heading {
+    color: #333;
+}
+
+.problem .list li {
+    color: #666;
+}
+
+.staticBox {
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 8px;
+    opacity: 0.5;
+}
+
+/* Solution Side - Vibrant/Moving */
+.solution {
+    background: linear-gradient(135deg, var(--nex-primary) 0%, var(--nex-dark) 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.solution .heading {
+    color: white;
+}
+
+.solution .list li {
+    color: white;
+}
+
+.heading {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.list li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--nex-gold);
+    border-radius: 50%;
+    font-size: 0.9rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.problemVisual {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.solutionVisual {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    position: relative;
+}
+
+.floatingBox {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--nex-gold), var(--nex-navy));
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .side {
+        min-height: 400px;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .side {
+        min-height: 350px;
+        padding: 1.5rem;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .list li {
+        font-size: 1rem;
+    }
+
+    .staticBox,
+    .floatingBox {
+        width: 60px;
+        height: 60px;
+    }
+}

@@ -1,0 +1,104 @@
+.page {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(135deg, var(--nex-navy), var(--nex-dark));
+    color: white;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.filterSection {
+    padding: 3rem 2rem;
+    background: var(--background);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.filterButton {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #4C0224;
+}
+
+.filterButton:hover {
+    border-color: var(--nex-primary);
+    color: var(--nex-primary);
+}
+
+.filterButton.active {
+    background: var(--nex-primary);
+    border-color: var(--nex-primary);
+    color: white;
+}
+
+.blogSection {
+    padding: 4rem 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.noResults {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--nex-navy);
+    padding: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .filterSection {
+        padding: 2rem 1rem;
+    }
+
+    .blogSection {
+        padding: 3rem 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

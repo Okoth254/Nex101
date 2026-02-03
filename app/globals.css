@@ -1,0 +1,162 @@
+/* ============================================
+   NEX101 Brand Color Palette
+   ============================================ */
+:root {
+  /* Primary Brand Colors */
+  --nex-primary: #CE0054;
+  /* Main Pink/Magenta */
+  --nex-dark: #4C0224;
+  /* Dark Burgundy */
+  --nex-gold: #E29D23;
+  /* Gold/Orange */
+  --nex-navy: #24395B;
+  /* Navy Blue */
+
+  /* Base Colors */
+  --background: #ffffff;
+  --foreground: #4C0224;
+
+  /* Typography */
+  --font-sretch: Impact, 'Arial Black', sans-serif;
+  /* Fallback until Sretch Pro is added */
+  --font-wordmark: var(--font-sretch);
+  --font-heading: var(--font-monumental);
+  --font-body: var(--font-figtree);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ============================================
+   Base Resets
+   ============================================ */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nex-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nex-dark);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--nex-primary) var(--background);
+}
+
+/* Custom cursor - hide default cursor on desktop */
+@media (hover: hover) and (pointer: fine) {
+
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    cursor: none !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ============================================
+   Typography Utilities
+   ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.wordmark {
+  font-family: var(--font-wordmark), sans-serif;
+  color: var(--nex-primary);
+}
+
+/* ============================================
+   Brand Color Utilities
+   ============================================ */
+.text-primary {
+  color: var(--nex-primary);
+}
+
+.text-dark {
+  color: var(--nex-dark);
+}
+
+.text-gold {
+  color: var(--nex-gold);
+}
+
+.text-navy {
+  color: var(--nex-navy);
+}
+
+.bg-primary {
+  background-color: var(--nex-primary);
+}
+
+.bg-dark {
+  background-color: var(--nex-dark);
+}
+
+.bg-gold {
+  background-color: var(--nex-gold);
+}
+
+.bg-navy {
+  background-color: var(--nex-navy);
+}
+
+/* ============================================
+   Dark Mode
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

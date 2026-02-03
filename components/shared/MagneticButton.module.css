@@ -1,0 +1,10 @@
+.magneticButton {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.magneticLink {
+    text-decoration: none;
+    color: inherit;
+}

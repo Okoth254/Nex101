@@ -1,0 +1,234 @@
+.page {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.hero {
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(135deg, var(--nex-navy), var(--nex-dark));
+    color: white;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.section {
+    padding: 6rem 2rem;
+    background: var(--nex-dark);
+}
+
+.meaningSection {
+    background: linear-gradient(180deg, rgba(206, 0, 84, 0.05) 0%, transparent 100%);
+}
+
+.valuesSection {
+    background: linear-gradient(180deg, transparent 0%, rgba(36, 57, 91, 0.05) 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sectionHeading {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.content p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: white;
+}
+
+.meaningGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.meaningCard {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.meaningCard h3 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--nex-primary);
+    margin-bottom: 1.5rem;
+}
+
+.meaningPart {
+    margin-bottom: 1.5rem;
+}
+
+.meaningPart h4 {
+    font-size: 1.25rem;
+    color: var(--nex-navy);
+    margin-bottom: 0.5rem;
+}
+
+.meaningPart p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #4C0224;
+}
+
+.meaningConclusion {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: white;
+}
+
+.meaningConclusion strong {
+    color: var(--nex-primary);
+}
+
+.mvGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.mvCard {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.mvIcon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.mvCard h3 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--nex-primary);
+    margin-bottom: 1rem;
+}
+
+.mvCard p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4C0224;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.valueCard {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+    box-shadow: 0 8px 30px rgba(206, 0, 84, 0.15);
+    transform: translateY(-5px);
+}
+
+.valueCard h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--nex-navy);
+    margin-bottom: 0.75rem;
+}
+
+.valueCard p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #4C0224;
+}
+
+.whyList {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.whyItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #4C0224;
+    padding: 1rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.checkIcon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--nex-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .section {
+        padding: 4rem 1rem;
+    }
+
+    .meaningGrid,
+    .mvGrid,
+    .valuesGrid {
+        grid-template-columns: 1fr;
+    }
+}
