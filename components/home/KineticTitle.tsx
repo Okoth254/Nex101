@@ -27,7 +27,7 @@ export default function KineticTitle() {
             transition: {
                 delay: i * 0.1,
                 duration: 0.8,
-                ease: [0.6, 0.01, 0.05, 0.95],
+                ease: [0.6, 0.01, 0.05, 0.95] as any,
             },
         }),
     };
