@@ -23,7 +23,7 @@ export default function RevealText({
             transition={{
                 duration: 0.6,
                 delay,
-                ease: [0.6, 0.01, 0.05, 0.95]
+                ease: [0.6, 0.01, 0.05, 0.95] as any
             }}
         >
             {children}

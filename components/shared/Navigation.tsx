@@ -25,7 +25,7 @@ export default function Navigation() {
             className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            transition={{ duration: 0.6, ease: [0.6, 0.01, 0.05, 0.95] }}
+            transition={{ duration: 0.6, ease: [0.6, 0.01, 0.05, 0.95] as any }}
         >
             <div className={styles.container}>
                 {/* Logo */}
