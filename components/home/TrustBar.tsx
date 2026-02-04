@@ -62,6 +62,16 @@ export default function TrustBar() {
                         { src: "/assets/clients/client-11.png", alt: "Roylen Clinic" },
                         { src: "/assets/clients/client-12.png", alt: "Willary" },
                         { src: "/assets/clients/client-13.png", alt: "Zenith" },
+                        { src: "/assets/clients/client-14.png", alt: "Bilkheir Travel 2" },
+                        { src: "/assets/clients/client-15.png", alt: "Nextra Layout" },
+                        { src: "/assets/clients/client-16.png", alt: "Sunstone Collage" },
+                        { src: "/assets/clients/client-17.png", alt: "Video Logo 1" },
+                        { src: "/assets/clients/client-18.png", alt: "Video Logo 2" },
+                        { src: "/assets/clients/client-19.png", alt: "Video Logo 3" },
+                        { src: "/assets/clients/client-20.png", alt: "Video Logo 6" },
+                        { src: "/assets/clients/client-21.png", alt: "Video Logo 10" },
+                        { src: "/assets/clients/client-22.png", alt: "Video Logo 11" },
+                        { src: "/assets/clients/client-23.png", alt: "Video Logo 12" },
                     ].map((logo, i) => (
                         <motion.div
                             key={i}
