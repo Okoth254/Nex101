@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Figtree, Unbounded } from "next/font/google";
+import { Figtree } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "@/components/shared/Navigation";
 import Footer from "@/components/shared/Footer";
@@ -16,11 +17,21 @@ const figtree = Figtree({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-// Unbounded - Used for key headlines (similar to Monumental)
-const monumental = Unbounded({
+// Monument Extended - Local Font
+const monumental = localFont({
+  src: [
+    {
+      path: "../public/fonts/MonumentExtended-Regular.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/MonumentExtended-Ultrabold.woff",
+      weight: "800",
+      style: "normal",
+    },
+  ],
   variable: "--font-monumental",
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
 });
 
 export const metadata: Metadata = {

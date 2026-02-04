@@ -44,16 +44,27 @@ export default function TrustBar() {
                 </motion.h2>
 
                 {/* Logo placeholders with pulse effect */}
+                {/* Client Logos Grid */}
                 <div className={styles.logoGrid}>
-                    {Array.from({ length: 6 }).map((_, i) => (
+                    {[
+                        { src: "/assets/clients/client-1.png", alt: "DoubleU Tech Biz" },
+                        { src: "/assets/clients/client-2.jpg", alt: "Eastview Hospital" },
+                        { src: "/assets/clients/client-3.png", alt: "Eastview Hospital Icon" },
+                        { src: "/assets/clients/client-4.png", alt: "Neo Grace Medical Centre" },
+                        { src: "/assets/clients/client-5.png", alt: "Mental Health Reality Hub" },
+                    ].map((logo, i) => (
                         <motion.div
                             key={i}
                             className={styles.logoCard}
                             variants={itemVariants}
                             whileHover={{ scale: 1.05 }}
                         >
-                            <div className={styles.logoPlaceholder}>
-                                <span>Client {i + 1}</span>
+                            <div className={styles.imageWrapper}>
+                                <img
+                                    src={logo.src}
+                                    alt={logo.alt}
+                                    className={styles.logoImage}
+                                />
                             </div>
                         </motion.div>
                     ))}
