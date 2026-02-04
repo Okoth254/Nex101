@@ -54,6 +54,14 @@ export default function TrustBar() {
                         { src: "/assets/clients/client-3.png", alt: "Eastview Hospital Icon" },
                         { src: "/assets/clients/client-4.png", alt: "Neo Grace Medical Centre" },
                         { src: "/assets/clients/client-5.png", alt: "Mental Health Reality Hub" },
+                        { src: "/assets/clients/client-6.png", alt: "Alterfibre" },
+                        { src: "/assets/clients/client-7.png", alt: "Ashnetworks" },
+                        { src: "/assets/clients/client-8.png", alt: "Activeboard" },
+                        { src: "/assets/clients/client-9.png", alt: "Bilkheir Travel" },
+                        { src: "/assets/clients/client-10.png", alt: "Capital Logo" },
+                        { src: "/assets/clients/client-11.png", alt: "Roylen Clinic" },
+                        { src: "/assets/clients/client-12.png", alt: "Willary" },
+                        { src: "/assets/clients/client-13.png", alt: "Zenith" },
                     ].map((logo, i) => (
                         <motion.div
                             key={i}
