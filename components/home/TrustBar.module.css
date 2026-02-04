@@ -27,7 +27,7 @@
 .logoCard {
     background: white;
     border-radius: 12px;
-    padding: 0.5rem;
+    padding: 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     cursor: pointer;
@@ -67,7 +67,7 @@
 
 .logoImage {
     object-fit: contain;
-    padding: 0.5rem;
+    padding: 0;
     /* filter: grayscale(100%); */
     /* opacity: 0.7; */
     transition: all 0.3s ease;
@@ -95,7 +95,7 @@
     }
 
     .logoCard {
-        padding: 1.5rem;
+        padding: 0;
     }
 
     .logoPlaceholder {
