@@ -86,6 +86,7 @@ export default function TrustBar() {
                                     fill
                                     className={styles.logoImage}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                    unoptimized
                                 />
                             </div>
                         </motion.div>
