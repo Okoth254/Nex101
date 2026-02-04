@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { IMPACT_STATS } from '@/lib/constants';
@@ -60,10 +62,12 @@ export default function TrustBar() {
                             whileHover={{ scale: 1.05 }}
                         >
                             <div className={styles.imageWrapper}>
-                                <img
+                                <Image
                                     src={logo.src}
                                     alt={logo.alt}
+                                    fill
                                     className={styles.logoImage}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                             </div>
                         </motion.div>
