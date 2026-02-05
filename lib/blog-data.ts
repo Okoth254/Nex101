@@ -23,7 +23,7 @@ export const BLOG_POSTS: BlogPost[] = [
         author: 'NEX101 Team',
         date: '2026-01-15',
         category: 'Branding',
-        image: '🌍',
+        image: '/assets/services/branding/branding-1.png',
         readTime: '5 min read',
     },
     {
@@ -35,7 +35,7 @@ export const BLOG_POSTS: BlogPost[] = [
         author: 'NEX101 Team',
         date: '2026-01-10',
         category: 'Strategy',
-        image: '🔄',
+        image: '/assets/portfolio/rebrand-1.png',
         readTime: '4 min read',
     },
     {
@@ -47,7 +47,7 @@ export const BLOG_POSTS: BlogPost[] = [
         author: 'NEX101 Team',
         date: '2026-01-05',
         category: 'Digital Marketing',
-        image: '📱',
+        image: '/assets/portfolio/social-1.png',
         readTime: '6 min read',
     },
     {
@@ -59,7 +59,7 @@ export const BLOG_POSTS: BlogPost[] = [
         author: 'NEX101 Team',
         date: '2025-12-28',
         category: 'Startups',
-        image: '🚀',
+        image: '/assets/portfolio/startup-1.png',
         readTime: '5 min read',
     },
     {
@@ -71,7 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
         author: 'NEX101 Team',
         date: '2025-12-20',
         category: 'Business',
-        image: '🤝',
+        image: '/assets/services/corporate/corporate-1.png',
         readTime: '7 min read',
     },
     {
@@ -83,7 +83,7 @@ export const BLOG_POSTS: BlogPost[] = [
         author: 'NEX101 Team',
         date: '2025-12-15',
         category: 'Branding',
-        image: '🎨',
+        image: '/assets/portfolio/merch-1.png',
         readTime: '5 min read',
     },
 ];
