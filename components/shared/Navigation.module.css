@@ -98,7 +98,69 @@
     white-space: nowrap;
 }
 
-/* ... (Dropdown styles remain) ... */
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow:
+        0 20px 40px -5px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+    padding: 1.25rem;
+    min-width: 340px;
+    display: grid;
+    gap: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdownMenu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdownItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    color: var(--nex-navy);
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.dropdownItem:hover {
+    background: rgba(206, 0, 84, 0.05);
+    transform: translateX(4px);
+}
+
+.dropdownItem:hover span {
+    color: var(--nex-primary);
+}
+
+.serviceIcon {
+    font-size: 1.35rem;
+    transition: transform 0.2s ease;
+}
 
 /* CTA Button */
 .ctaButton {
