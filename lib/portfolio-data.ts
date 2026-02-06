@@ -22,7 +22,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
         client: 'TechVenture Inc.',
         year: '2025',
         description: 'Complete brand identity and launch package for innovative tech startup',
-        image: '/assets/portfolio/startup-1.png',
+        image: '/assets/cases/case-1.png',
         tags: ['Logo Design', 'Brand Identity', 'Website'],
         services: ['Startup Solutions', 'Brand Management'],
     },

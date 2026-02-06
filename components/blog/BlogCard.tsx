@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { BlogPost } from '@/lib/blog-data';
 import styles from './BlogCard.module.css';
@@ -22,7 +23,13 @@ export default function BlogCard({ post, index }: BlogCardProps) {
         >
             <Link href={`/blog/${post.slug}`} className={styles.cardLink}>
                 <div className={styles.imageWrapper}>
-                    <span className={styles.imageIcon}>{post.image}</span>
+                    <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className={styles.image}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
                 </div>
 
                 <div className={styles.content}>

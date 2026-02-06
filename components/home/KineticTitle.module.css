@@ -6,7 +6,7 @@
 }
 
 .title {
-    font-family: var(--font-heading);
+    font-family: var(--font-wordmark);
     font-size: clamp(3rem, 10vw, 7rem);
     font-weight: 900;
     color: var(--nex-primary);
@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     gap: 0.1em;
+    text-transform: uppercase;
 }
 
 .letter {

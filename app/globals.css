@@ -17,9 +17,8 @@
   --foreground: #4C0224;
 
   /* Typography */
-  --font-sretch: Impact, 'Arial Black', sans-serif;
-  /* Fallback until Sretch Pro is added */
-  --font-wordmark: var(--font-sretch);
+  --font-stretch: var(--font-stretch), sans-serif;
+  --font-wordmark: var(--font-stretch);
   --font-heading: var(--font-monumental);
   --font-body: var(--font-figtree);
 }
@@ -110,11 +109,15 @@ h6 {
   font-family: var(--font-heading), serif;
   font-weight: 700;
   line-height: 1.2;
+  text-transform: uppercase;
+  /* Monumental looks best uppercase */
 }
 
 .wordmark {
   font-family: var(--font-wordmark), sans-serif;
   color: var(--nex-primary);
+  letter-spacing: -0.02em;
+  /* Tweak for stretch look */
 }
 
 /* ============================================

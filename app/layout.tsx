@@ -34,6 +34,13 @@ const monumental = localFont({
   variable: "--font-monumental",
 });
 
+// Stretch Pro - Local Font
+const stretch = localFont({
+  src: "../public/fonts/StretchPro.otf",
+  variable: "--font-stretch",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "NEX101 - Future-Focused Creative Hub",
   description: "Africa's leading creative hub for branding, design, and digital solutions. We push brands beyond the expected level.",
@@ -46,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${figtree.variable} ${monumental.variable}`}>
+      <body className={`${figtree.variable} ${monumental.variable} ${stretch.variable}`}>
         <PageLoader />
         <CustomCursor />
         <ScrollAnimations />
