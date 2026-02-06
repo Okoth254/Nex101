@@ -23,12 +23,7 @@
   --font-body: var(--font-figtree);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 /* ============================================
    Base Resets
@@ -153,13 +148,4 @@ h6 {
 
 .bg-navy {
   background-color: var(--nex-navy);
-}
-
-/* ============================================
-   Dark Mode
-   ============================================ */
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
