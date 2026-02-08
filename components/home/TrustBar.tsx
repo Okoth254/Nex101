@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { IMPACT_STATS } from '@/lib/constants';
+import { CLIENTS } from '@/lib/client-data';
 import styles from './TrustBar.module.css';
 
 export default function TrustBar() {
@@ -45,35 +46,25 @@ export default function TrustBar() {
                     Trusted by {IMPACT_STATS.brandsLaunched}+ Brands Across Africa
                 </motion.h2>
 
-                {/* Logo placeholders with pulse effect */}
-                {/* Client Logos Grid */}
-                <div className={styles.logoGrid}>
-                    {[
-                        { src: "/assets/clients/client-1.png", alt: "DoubleU Tech Biz" },
-                        { src: "/assets/clients/client-2.jpg", alt: "Eastview Hospital" },
-                        { src: "/assets/clients/client-3.png", alt: "Eastview Hospital Icon" },
-                        { src: "/assets/clients/client-4.png", alt: "Neo Grace Medical Centre" },
-                        { src: "/assets/clients/client-5.png", alt: "Mental Health Reality Hub" },
-                    ].map((logo, i) => (
-                        <motion.div
-                            key={i}
-                            className={styles.logoCard}
-                            variants={itemVariants}
-                            whileHover={{ scale: 1.05 }}
-                        >
-                            <div className={styles.imageWrapper}>
-                                <Image
-                                    src={logo.src}
-                                    alt={logo.alt}
-                                    fill
-                                    className={styles.logoImage}
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    unoptimized
-                                    priority
-                                />
-                            </div>
-                        </motion.div>
-                    ))}
+                {/* Infinite Marquee */}
+                <div className={styles.marqueeWrapper}>
+                    <div className={styles.marqueeTrack}>
+                        {/* Duplicate list 4 times to ensure smooth infinite scroll even on wide screens */}
+                        {[...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, i) => (
+                            <Link href={client.logo ? '#' : '#'} key={`${client.id}-${i}`} className={styles.logoCard}>
+                                <div className={styles.imageWrapper}>
+                                    <Image
+                                        src={client.logo}
+                                        alt={client.name}
+                                        fill
+                                        className={styles.logoImage}
+                                        sizes="(max-width: 768px) 150px, 200px"
+                                        unoptimized // Since we might use placeholder assets initially
+                                    />
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
 
                 <motion.p className={styles.subtext} variants={itemVariants}>

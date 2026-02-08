@@ -26,89 +26,101 @@
     margin-bottom: 3rem;
 }
 
-.logoGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+/* Marquee Container */
+.marqueeWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    /* Fade edges */
+}
+
+.marqueeTrack {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+    padding: 1rem 0;
+}
+
+.marqueeTrack:hover {
+    animation-play-state: paused;
+}
+
+/* Reverse Scroll Variant */
+.marqueeTrack.reverse {
+    animation-direction: reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .logoCard {
     background: white;
     border-radius: 12px;
-    padding: 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     cursor: pointer;
-    animation: pulse 3s ease-in-out infinite;
-    height: 110px;
+    height: 100px;
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .logoCard:hover {
-    box-shadow: 0 8px 30px rgba(206, 0, 84, 0.15);
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    }
-
-    50% {
-        box-shadow: 0 4px 25px rgba(206, 0, 84, 0.12);
-    }
+    box-shadow: 0 10px 30px rgba(206, 0, 84, 0.1);
+    transform: translateY(-5px);
 }
 
 .imageWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
     position: relative;
-    /* Required for next/image fill */
+    width: 100%;
+    height: 100%;
 }
 
 .logoImage {
     object-fit: contain;
-    padding: 8px;
-    /* filter: grayscale(100%); */
-    /* opacity: 0.7; */
-    transition: all 0.3s ease;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.4s ease;
 }
 
 .logoCard:hover .logoImage {
     filter: grayscale(0%);
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .subtext {
     color: var(--nex-navy);
     font-size: 1.1rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    opacity: 0.8;
 }
 
 @media (max-width: 768px) {
     .section {
-        padding: 3rem 1rem;
+        padding: 3rem 0;
     }
 
-    .logoGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    .marqueeTrack {
+        gap: 2rem;
+        animation-duration: 20s;
     }
 
     .logoCard {
-        padding: 0;
-    }
-
-    .logoPlaceholder {
-        height: 60px;
-        font-size: 0.8rem;
+        width: 140px;
+        height: 80px;
+        padding: 1rem;
     }
 }
