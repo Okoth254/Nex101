@@ -1,5 +1,4 @@
-import Hero3D from '@/components/home/Hero3D';
-import KineticTitle from '@/components/home/KineticTitle';
+import KineticTypography from '@/components/home/KineticTypography';
 import TrustBar from '@/components/home/TrustBar';
 import GapSection from '@/components/home/GapSection';
 import ServicesTeaser from '@/components/home/ServicesTeaser';
@@ -11,9 +10,8 @@ export default function Home() {
   return (
     <div className={styles.page}>
       {/* Hero Section */}
-      <section className={styles.hero}>
-        <Hero3D />
-        <KineticTitle />
+      <section className={styles.hero} style={{ height: '100vh', overflow: 'hidden' }}>
+        <KineticTypography />
       </section>
 
       {/* Trust Bar */}

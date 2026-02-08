@@ -51,7 +51,7 @@ export default function TrustBar() {
                     <div className={styles.marqueeTrack}>
                         {/* Duplicate list 4 times to ensure smooth infinite scroll even on wide screens */}
                         {[...CLIENTS, ...CLIENTS, ...CLIENTS, ...CLIENTS].map((client, i) => (
-                            <Link href={client.logo ? '#' : '#'} key={`${client.id}-${i}`} className={styles.logoCard}>
+                            <div key={`${client.id}-${i}`} className={styles.logoCard}>
                                 <div className={styles.imageWrapper}>
                                     <Image
                                         src={client.logo}
@@ -62,7 +62,7 @@ export default function TrustBar() {
                                         unoptimized // Since we might use placeholder assets initially
                                     />
                                 </div>
-                            </Link>
+                            </div>
                         ))}
                     </div>
                 </div>
