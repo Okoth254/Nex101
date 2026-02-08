@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {/* Related Posts */}
             <div className="max-w-[1200px] mx-auto px-6 pb-20">
-                <RelatedPosts currentSlug={params.slug} category={post.category} />
+                <RelatedPosts currentSlug={slug} category={post.category} />
             </div>
         </article>
     );
