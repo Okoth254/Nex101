@@ -73,6 +73,7 @@
 
 .content p {
     margin-bottom: 1.5rem;
+    white-space: pre-wrap;
 }
 
 @media (max-width: 768px) {

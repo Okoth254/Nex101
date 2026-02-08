@@ -42,7 +42,7 @@ const stretch = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "NEX101 - Future-Focused Creative Hub",
+  title: "NEX101 - Your Next Level Creative Hub",
   description: "Africa's leading creative hub for branding, design, and digital solutions. We push brands beyond the expected level.",
 };
 

@@ -88,7 +88,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        <strong>NEX101 means:</strong> A future-focused creative hub that pushes brands beyond the expected level.
+                        <strong>NEX101 means:</strong> Your next level creative hub that pushes brands beyond the expected level.
                     </motion.p>
                 </div>
             </section>
@@ -121,6 +121,25 @@ export default function AboutPage() {
                             <p>To be Africa's leading creative hub, known for exceptional creativity and innovative solutions that enable brands to unlock limitless growth.</p>
                         </motion.div>
                     </div>
+                </div>
+            </section>
+
+            {/* Our Commitment */}
+            <section className={`${styles.section} ${styles.commitmentSection}`}>
+                <div className={styles.container}>
+                    <motion.div
+                        className={styles.commitmentCard}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <h2 className={styles.sectionHeading} style={{ color: 'var(--nex-navy)', marginBottom: '2rem' }}>Our Commitment</h2>
+                        <p className={styles.commitmentText}>
+                            "We are committed to leading the creative industry, rewriting the standards of branding, and helping businesses compete globally from brand creation onwards. Every project we take on is fueled by the promise of innovation, impact, and measurable growth."
+                        </p>
+                        <div className={styles.commitmentAuthor}>— The NEX101 Promise</div>
+                    </motion.div>
                 </div>
             </section>
 

@@ -10,7 +10,7 @@ import styles from './KineticTitle.module.css';
  */
 export default function KineticTitle() {
     const title = "NEX101";
-    const subtitle = "A Future-Focused Creative Hub";
+    const subtitle = "Your Next Level Creative Hub";
 
     const letterVariants = {
         hidden: {

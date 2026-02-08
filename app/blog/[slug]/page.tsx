@@ -66,21 +66,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             </div>
 
             <div className={styles.content}>
-                {/* 
-                   In a real app, this would be a Markdown renderer.
-                   For now, we just render the content string (or split it).
-                   Since content in BLOG_POSTS is just a short string placeholder in many cases,
-                   we'll simulate some more text if needed or just render it.
-                */}
-                <p>{post.content}</p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                {post.content.split('\n\n').map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                ))}
             </div>
         </article>
     );

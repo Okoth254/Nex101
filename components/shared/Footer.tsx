@@ -23,7 +23,7 @@ export default function Footer() {
                             </div>
                         </Link>
                         <p className={styles.tagline}>
-                            A future-focused creative hub that pushes brands beyond the expected level.
+                            Your next level creative hub that pushes brands beyond the expected level.
                         </p>
                         <div className={styles.social}>
                             <a href={`https://facebook.com/${CONTACT.social.facebook}`} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>

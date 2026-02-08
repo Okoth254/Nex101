@@ -150,6 +150,51 @@
     color: #4C0224;
 }
 
+.commitmentSection {
+    background: linear-gradient(135deg, rgba(206, 0, 84, 0.05), rgba(76, 2, 36, 0.05));
+    text-align: center;
+}
+
+.commitmentCard {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 4rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.commitmentCard::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 10rem;
+    color: rgba(206, 0, 84, 0.1);
+    font-family: serif;
+    line-height: 1;
+}
+
+.commitmentText {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--nex-navy);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.commitmentAuthor {
+    font-family: var(--font-heading);
+    color: var(--nex-primary);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .valuesGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

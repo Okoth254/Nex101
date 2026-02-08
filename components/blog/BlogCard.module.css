@@ -81,8 +81,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     padding-top: 1rem;
-    border-top: 1px solid #e0e0e0;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.authorInfo {
+    display: flex;
+    gap: 1rem;
+}
+
+.readMore {
+    color: var(--nex-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+}
+
+.card:hover .readMore {
+    transform: translateX(5px);
 }
 
 .author {

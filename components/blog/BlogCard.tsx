@@ -42,8 +42,11 @@ export default function BlogCard({ post, index }: BlogCardProps) {
                     <p className={styles.excerpt}>{post.excerpt}</p>
 
                     <div className={styles.footer}>
-                        <span className={styles.author}>{post.author}</span>
-                        <span className={styles.readTime}>{post.readTime}</span>
+                        <div className={styles.authorInfo}>
+                            <span className={styles.author}>{post.author}</span>
+                            <span className={styles.readTime}>{post.readTime}</span>
+                        </div>
+                        <span className={styles.readMore}>Read More →</span>
                     </div>
                 </div>
             </Link>
