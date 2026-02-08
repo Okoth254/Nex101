@@ -77,7 +77,7 @@ export default function TrustBar() {
                 </div>
 
                 <motion.p className={styles.subtext} variants={itemVariants}>
-                    Join leading businesses, organizations, and institutions who trust NEX101
+                    Join leading businesses, organizations, and institutions who trust <span className="wordmark">NEX101</span>
                 </motion.p>
             </motion.div>
         </section>

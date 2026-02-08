@@ -102,10 +102,15 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading), serif;
-  font-weight: 700;
+  font-weight: 400;
+  /* Regular per user request */
   line-height: 1.2;
   text-transform: uppercase;
-  /* Monumental looks best uppercase */
+}
+
+.font-heavy {
+  font-weight: 800 !important;
+  /* Ultrabold */
 }
 
 .wordmark {

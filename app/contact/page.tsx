@@ -60,7 +60,7 @@ export default function ContactPage() {
             {/* Hero */}
             <section className={styles.hero}>
                 <motion.h1
-                    className={styles.title}
+                    className={`${styles.title} font-heavy`}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -88,7 +88,7 @@ export default function ContactPage() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
-                            <h2>Get in Touch</h2>
+                            <h2 className="font-heavy">Get in Touch</h2>
 
                             {status.message && (
                                 <div className={`${styles.statusMessage} ${styles[status.type]}`}>

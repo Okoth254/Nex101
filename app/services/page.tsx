@@ -12,7 +12,7 @@ export default function ServicesPage() {
             {/* Hero Section */}
             <section className={styles.hero}>
                 <motion.h1
-                    className={styles.title}
+                    className={`${styles.title} font-heavy`}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}

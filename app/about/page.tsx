@@ -48,7 +48,7 @@ export default function AboutPage() {
             {/* NEX101 Meaning */}
             <section className={`${styles.section} ${styles.meaningSection}`}>
                 <div className={styles.container}>
-                    <h2 className={styles.sectionHeading}>The Meaning Behind NEX101</h2>
+                    <h2 className={styles.sectionHeading} style={{ fontWeight: 800 }}>The Meaning Behind <span className="wordmark">NEX101</span></h2>
 
                     <div className={styles.meaningGrid}>
                         <motion.div
@@ -58,14 +58,14 @@ export default function AboutPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h3>NEX = NEXT + NEXUS</h3>
+                            <h3><span className="wordmark">NEX</span> = NEXT + NEXUS</h3>
                             <div className={styles.meaningPart}>
                                 <h4>NEXT</h4>
-                                <p>Next level, next step, and the future of a brand. NEX101 is about helping businesses move forward.</p>
+                                <p>Next level, next step, and the future of a brand. <span className="wordmark">NEX101</span> is about helping businesses move forward.</p>
                             </div>
                             <div className={styles.meaningPart}>
                                 <h4>NEXUS</h4>
-                                <p>A hub. NEX101 is a central creative hub where businesses outsource from.</p>
+                                <p>A hub. <span className="wordmark">NEX101</span> is a central creative hub where businesses outsource from.</p>
                             </div>
                         </motion.div>
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        <strong>NEX101 means:</strong> Your next level creative hub that pushes brands beyond the expected level.
+                        <strong><span className="wordmark">NEX101</span> means:</strong> Your next level creative hub that pushes brands beyond the expected level.
                     </motion.p>
                 </div>
             </section>
@@ -134,11 +134,11 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className={styles.sectionHeading} style={{ color: 'var(--nex-navy)', marginBottom: '2rem' }}>Our Commitment</h2>
+                        <h2 className={styles.sectionHeading} style={{ color: 'var(--nex-navy)', marginBottom: '2rem', fontWeight: 800 }}>Our Commitment</h2>
                         <p className={styles.commitmentText}>
                             "We are committed to leading the creative industry, rewriting the standards of branding, and helping businesses compete globally from brand creation onwards. Every project we take on is fueled by the promise of innovation, impact, and measurable growth."
                         </p>
-                        <div className={styles.commitmentAuthor}>— The NEX101 Promise</div>
+                        <div className={styles.commitmentAuthor}>— The <span className="wordmark">NEX101</span> Promise</div>
                     </motion.div>
                 </div>
             </section>

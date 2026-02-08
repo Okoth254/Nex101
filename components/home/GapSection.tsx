@@ -18,7 +18,7 @@ export default function GapSection() {
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className={styles.heading}>The Challenge</h2>
+                    <h2 className={`${styles.heading} font-heavy`}>The Challenge</h2>
                     <ul className={styles.list}>
                         <li>Inconsistent brand identity</li>
                         <li>Limited access to creative expertise</li>
@@ -39,7 +39,7 @@ export default function GapSection() {
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <h2 className={styles.heading}>The NEX101 Solution</h2>
+                    <h2 className={`${styles.heading} font-heavy`}>The <span className="wordmark">NEX101</span> Solution</h2>
                     <ul className={styles.list}>
                         <li>
                             <span className={styles.icon}>✓</span>
