@@ -33,7 +33,16 @@ export default function PageLoader() {
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <span className={styles.logoText}>NEX101</span>
+                    <div className={styles.logoText}>
+                        {"NEX101".split('').map((char, index) => (
+                            <span
+                                key={index}
+                                style={{ color: char === 'X' ? 'black' : '#CE0054' }}
+                            >
+                                {char}
+                            </span>
+                        ))}
+                    </div>
                 </motion.div>
 
                 <motion.div
