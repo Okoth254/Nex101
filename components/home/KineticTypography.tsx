@@ -101,7 +101,7 @@ export default function KineticTypography() {
                     <span key={index} className={styles.char}>{char}</span>
                 ))}
             </div>
-            <div className={styles.instruction}>SCROLL TO EXPLODE</div>
+
         </div>
     );
 }

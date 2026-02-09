@@ -31,18 +31,3 @@
     will-change: transform;
     /* Performance optimization */
 }
-
-.instruction {
-    position: absolute;
-    bottom: 40px;
-    width: 100%;
-    text-align: center;
-    opacity: 0.6;
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #4C0224;
-    /* Dark Burgundy */
-    font-family: var(--font-figtree);
-    pointer-events: none;
-}
