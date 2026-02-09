@@ -96,7 +96,7 @@
 
 .cardIndex {
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: 400;
     color: rgba(206, 0, 84, 0.05);
     line-height: 1;
     margin-bottom: -1rem;
@@ -105,7 +105,7 @@
 
 .cardTitle {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--nex-navy);
     font-family: var(--font-monumental);
 }

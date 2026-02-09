@@ -92,13 +92,19 @@ export default function KineticTypography() {
         };
     }, []);
 
-    const text = "next101";
+    const text = "NEX101";
 
     return (
         <div ref={containerRef} className={styles.heroSection}>
             <div ref={textRef} className={styles.kineticText}>
                 {text.split('').map((char, index) => (
-                    <span key={index} className={styles.char}>{char}</span>
+                    <span
+                        key={index}
+                        className={styles.char}
+                        style={{ color: char === 'X' ? 'black' : undefined }}
+                    >
+                        {char}
+                    </span>
                 ))}
             </div>
 

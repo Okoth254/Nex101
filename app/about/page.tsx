@@ -48,7 +48,7 @@ export default function AboutPage() {
             {/* NEX101 Meaning */}
             <section className={`${styles.section} ${styles.meaningSection}`}>
                 <div className={styles.container}>
-                    <h2 className={styles.sectionHeading} style={{ fontWeight: 800 }}>The Meaning Behind <span className="wordmark">NEX101</span></h2>
+                    <h2 className={styles.sectionHeading}>The Meaning Behind <span className="wordmark">NEX101</span></h2>
 
                     <div className={styles.meaningGrid}>
                         <motion.div
@@ -134,7 +134,7 @@ export default function AboutPage() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className={styles.sectionHeading} style={{ color: 'var(--nex-navy)', marginBottom: '2rem', fontWeight: 800 }}>Our Commitment</h2>
+                        <h2 className={styles.sectionHeading} style={{ color: 'var(--nex-navy)', marginBottom: '2rem' }}>Our Commitment</h2>
                         <p className={styles.commitmentText}>
                             "We are committed to leading the creative industry, rewriting the standards of branding, and helping businesses compete globally from brand creation onwards. Every project we take on is fueled by the promise of innovation, impact, and measurable growth."
                         </p>

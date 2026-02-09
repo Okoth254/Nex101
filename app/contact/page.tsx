@@ -25,15 +25,18 @@ export default function ContactPage() {
         e.preventDefault();
         setStatus({ type: 'loading', message: '' });
 
-        try {
-            // Simulate network request
-            await new Promise(resolve => setTimeout(resolve, 1500));
+        const encode = (data: any) => {
+            return Object.keys(data)
+                .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+                .join("&");
+        }
 
-            // Log form data to console instead of sending to API
-            console.log('----- FORM SUBMISSION (CLIENT-SIDE) -----');
-            console.log('Form Data:', formData);
-            console.log('In a real static deployment, you would point this to a service like Formspree or Netlify Forms.');
-            console.log('-----------------------------------------');
+        try {
+            await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({ "form-name": "contact", ...formData })
+            });
 
             setStatus({ type: 'success', message: 'Message sent successfully! We will get back to you soon.' });
 
@@ -60,7 +63,7 @@ export default function ContactPage() {
             {/* Hero */}
             <section className={styles.hero}>
                 <motion.h1
-                    className={`${styles.title} font-heavy`}
+                    className={styles.title}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -96,7 +99,14 @@ export default function ContactPage() {
                                 </div>
                             )}
 
-                            <form onSubmit={handleSubmit} className={styles.form}>
+                            <form
+                                onSubmit={handleSubmit}
+                                className={styles.form}
+                                name="contact"
+                                data-netlify="true"
+                                method="POST"
+                            >
+                                <input type="hidden" name="form-name" value="contact" />
                                 <div className={styles.formGroup}>
                                     <label htmlFor="name">Name *</label>
                                     <input

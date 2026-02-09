@@ -11,7 +11,7 @@
 .heading {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 4rem;
     color: var(--foreground);
@@ -62,7 +62,7 @@
 .caseTitle {
     font-family: var(--font-heading);
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--nex-navy);
     margin-bottom: 0.5rem;
 }
@@ -84,7 +84,7 @@
 .sectionTitle {
     font-family: var(--font-heading);
     font-size: 1.1rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--nex-navy);
     margin-bottom: 0.75rem;
     text-transform: uppercase;

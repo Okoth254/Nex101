@@ -11,7 +11,7 @@
 .heading {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     color: var(--foreground);
     margin-bottom: 4rem;
@@ -71,7 +71,7 @@
 .serviceName {
     font-family: var(--font-heading);
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 400;
     text-align: center;
     margin: 0;
     line-height: 1.3;

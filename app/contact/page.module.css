@@ -13,7 +13,7 @@
 .title {
     font-family: var(--font-heading);
     font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -45,7 +45,7 @@
 .infoWrapper h2 {
     font-family: var(--font-heading);
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--foreground);
     margin-bottom: 2rem;
 }

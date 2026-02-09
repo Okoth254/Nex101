@@ -54,7 +54,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
                 <div className={styles.heroContent}>
                     <span className={styles.category}>{post.category}</span>
-                    <h1 className={`${styles.title} font-heavy`}>{post.title}</h1>
+                    <h1 className={styles.title}>{post.title}</h1>
 
                     <div className={styles.meta}>
                         <span className="flex items-center gap-2">

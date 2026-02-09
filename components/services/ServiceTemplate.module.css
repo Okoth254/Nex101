@@ -29,7 +29,7 @@
 .title {
     font-family: var(--font-heading);
     font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -58,7 +58,7 @@
 .sectionHeading {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 4vw, 2.5rem);
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 3rem;
     color: var(--foreground);
@@ -163,7 +163,7 @@
 .ctaHeading {
     font-family: var(--font-heading);
     font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 2rem;
 }
 

@@ -15,13 +15,13 @@
 .kineticText {
     font-size: 15vw;
     /* Massive responsive text */
-    font-weight: 800;
+    font-weight: 400;
     text-transform: uppercase;
     white-space: nowrap;
     cursor: default;
     user-select: none;
     line-height: 1;
-    font-family: 'Monument Extended', sans-serif;
+    font-family: var(--font-stretch);
     /* Use custom font */
 }
 
