@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form Fallback</title>
 </head>
+
 <body>
     <!-- 
         This form exists purely for Netlify's build bots to detect the form fields.
@@ -12,11 +14,11 @@
     -->
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
         <input type="hidden" name="form-name" value="contact" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="tel" name="phone" />
-        <input type="text" name="company" />
-        <select name="service">
+        <input type="text" name="name" required />
+        <input type="email" name="email" required />
+        <input type="tel" name="phone" required />
+        <input type="text" name="company" required />
+        <select name="service" required>
             <option value="startup">Startup Solutions</option>
             <option value="development">Development Services</option>
             <option value="partnership">Creative Partnership</option>
@@ -26,7 +28,8 @@
             <option value="merchandise">Branding & Merchandise</option>
             <option value="consultancy">Strategic Consultancy</option>
         </select>
-        <textarea name="message"></textarea>
+        <textarea name="message" required></textarea>
     </form>
 </body>
+
 </html>

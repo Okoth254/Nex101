@@ -15,6 +15,7 @@ const figtree = Figtree({
   variable: "--font-figtree",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  preload: false,
 });
 
 // Monument Extended - Local Font
@@ -32,13 +33,16 @@ const monumental = localFont({
     },
   ],
   variable: "--font-monumental",
+  preload: false,
 });
 
+// Stretch Pro - Local Font
 // Stretch Pro - Local Font
 const stretch = localFont({
   src: "../public/fonts/StretchPro.otf",
   variable: "--font-stretch",
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {

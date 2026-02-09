@@ -23,6 +23,14 @@ export default function ContactPage() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Check for any empty fields before submitting
+        const { name, email, phone, company, service, message } = formData;
+        if (!name || !email || !phone || !company || !service || !message) {
+            setStatus({ type: 'error', message: 'Please fill in all fields before sending.' });
+            return;
+        }
+
         setStatus({ type: 'loading', message: '' });
 
         const encode = (data: any) => {
@@ -130,29 +138,32 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="phone">Phone</label>
+                                    <label htmlFor="phone">Phone *</label>
                                     <input
                                         type="tel"
                                         id="phone"
+                                        required
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     />
                                 </div>
 
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="company">Company/Organization</label>
+                                    <label htmlFor="company">Company/Organization *</label>
                                     <input
                                         type="text"
                                         id="company"
+                                        required
                                         value={formData.company}
                                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                                     />
                                 </div>
 
                                 <div className={styles.formGroup}>
-                                    <label htmlFor="service">Service Interested In</label>
+                                    <label htmlFor="service">Service Interested In *</label>
                                     <select
                                         id="service"
+                                        required
                                         value={formData.service}
                                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                                     >
