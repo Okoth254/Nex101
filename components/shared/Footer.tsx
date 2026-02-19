@@ -35,7 +35,7 @@ export default function Footer() {
                             <a href={`https://tiktok.com/${CONTACT.social.tiktok}`} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                                 TikTok
                             </a>
-                            <a href="https://wa.link/ziamfj" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                            <a href={CONTACT.social.whatsapp} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                                 WhatsApp
                             </a>
                             <a href={`https://linkedin.com/company/${CONTACT.social.linkedin}`} target="_blank" rel="noopener noreferrer" className={styles.socialLink}>

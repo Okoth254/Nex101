@@ -29,6 +29,7 @@ export const CONTACT = {
         instagram: '@nex101hub',
         tiktok: '@nex101hub',
         linkedin: 'NEX101',
+        whatsapp: 'https://wa.link/ndjgu0',
     },
 } as const;
 
