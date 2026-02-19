@@ -58,7 +58,7 @@ export default function TrustBar() {
                                         alt={client.name}
                                         fill
                                         className={styles.logoImage}
-                                        sizes="(max-width: 768px) 150px, 200px"
+                                        sizes="(max-width: 768px) 160px, 240px"
                                         unoptimized // Since we might use placeholder assets initially
                                     />
                                 </div>

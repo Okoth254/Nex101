@@ -69,8 +69,8 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     cursor: pointer;
-    height: 100px;
-    width: 200px;
+    height: 120px;
+    width: 240px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,8 +119,8 @@
     }
 
     .logoCard {
-        width: 140px;
-        height: 80px;
+        width: 160px;
+        height: 95px;
         padding: 1rem;
     }
 }
