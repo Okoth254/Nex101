@@ -33,35 +33,38 @@ export default function ContactPage() {
 
         setStatus({ type: 'loading', message: '' });
 
-        const encode = (data: any) => {
-            return Object.keys(data)
-                .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-                .join("&");
-        }
-
         try {
-            await fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: encode({ "form-name": "contact", ...formData })
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
             });
 
-            setStatus({ type: 'success', message: 'Message sent successfully! We will get back to you soon.' });
+            const result = await response.json();
 
-            // Reset form
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                company: '',
-                service: '',
-                message: '',
-            });
+            if (response.ok && result.success) {
+                setStatus({ type: 'success', message: 'Message sent successfully! We will get back to you soon.' });
+
+                // Reset form
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    company: '',
+                    service: '',
+                    message: '',
+                });
+            } else {
+                setStatus({
+                    type: 'error',
+                    message: result.message || 'Failed to send message. Please try again.',
+                });
+            }
         } catch (error) {
             console.error('Submission error:', error);
             setStatus({
                 type: 'error',
-                message: 'Failed to send message. Please try again.'
+                message: 'Failed to send message. Please try again.',
             });
         }
     };
@@ -245,7 +248,7 @@ export default function ContactPage() {
                                     <a href={`https://tiktok.com/${CONTACT.social.tiktok}`} target="_blank" rel="noopener noreferrer">
                                         TikTok
                                     </a>
-                                    <a href="https://wa.link/ziamfj" target="_blank" rel="noopener noreferrer">
+                                    <a href={CONTACT.social.whatsapp} target="_blank" rel="noopener noreferrer">
                                         WhatsApp
                                     </a>
                                     <a href={`https://linkedin.com/company/${CONTACT.social.linkedin}`} target="_blank" rel="noopener noreferrer">
