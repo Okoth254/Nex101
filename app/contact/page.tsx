@@ -245,6 +245,9 @@ export default function ContactPage() {
                                     <a href={`https://tiktok.com/${CONTACT.social.tiktok}`} target="_blank" rel="noopener noreferrer">
                                         TikTok
                                     </a>
+                                    <a href="https://wa.link/ziamfj" target="_blank" rel="noopener noreferrer">
+                                        WhatsApp
+                                    </a>
                                     <a href={`https://linkedin.com/company/${CONTACT.social.linkedin}`} target="_blank" rel="noopener noreferrer">
                                         LinkedIn
                                     </a>
