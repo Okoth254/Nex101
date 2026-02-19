@@ -54,8 +54,8 @@
 
 .logoContainer {
     position: relative;
-    width: 120px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
     display: flex;
     align-items: center;
 }
